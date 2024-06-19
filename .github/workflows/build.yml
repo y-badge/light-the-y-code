@@ -24,5 +24,8 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
-      - name: Build Project
+      - name: Build Project for v3
         run: pio ci --board esp32-s3-devkitc-1 --project-option="lib_deps=https://github.com/y-board/y-board-v3" src/*
+
+      - name: Build Project for v2
+        run: pio ci --board esp32-s3-devkitc-1 --project-option="lib_deps=https://github.com/y-board/y-board-v2" src/*
